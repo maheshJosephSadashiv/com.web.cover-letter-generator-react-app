@@ -1,13 +1,19 @@
-import Navbar from './Navbar';
-import HomePage from './Home';
-import JobDetailsSubmission from "./JobDetailsSubmission";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NavBar from "./views/navbar";
+import JobSubmissionDetails from "./views/jobSubmissionDetails";
+import Home from "./views/home";
+
 
 function App() {
   return (
     <div className="App">
-        <Navbar/>
-        <HomePage/>
-        <JobDetailsSubmission/>
+      <NavBar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/jobSubmissionDetails" element={<JobSubmissionDetails />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
