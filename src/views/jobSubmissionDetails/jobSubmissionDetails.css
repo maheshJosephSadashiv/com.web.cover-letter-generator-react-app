@@ -22,11 +22,42 @@
 
 .result {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 50%;
+    padding: 10px;
+}
+
+.lead {
+    margin: 0;
 }
 
 .job-submission-details-form .btn, .job-submission-details-form .or-text {
     align-self: center;
+}
+
+.loader-backdrop {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(235, 230, 230, 0.5);
+    right: 0;
+}
+
+.loader {
+    display: flex;
+}
+
+.loader-text {
+    white-space: nowrap;
+    margin-left: 10px;
+    z-index: 1000;
+}
+
+.loader, .loader-text {
+    margin-top: -100px;
 }
